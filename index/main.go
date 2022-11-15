@@ -44,7 +44,7 @@ func main() {
 <h1>{{ .PostDate.Format "2006" }}</h1>
 <ol class="index">{{ end }}
 <li><time datetime="{{ .PostDate.Format "2006-01-02" }}">{{ .PostDate.Format "Jan 2" }}</time>
-<a href="{{ .URL }}">{{ .Title }}</a></li>{{end}}
+<a href="/henri{{ .URL }}">{{ .Title }}</a></li>{{end}}
 </ol>
 </nav>
 
