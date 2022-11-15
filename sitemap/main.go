@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/kaihendry/blog"
+	"github.com/antoine/blog-1"
 )
 
 func main() {
@@ -13,7 +13,7 @@ func main() {
 	sort.Sort(sort.Reverse(posts))
 
 	for _, v := range posts {
-		fmt.Printf("https://natalian.org%s\n", v.URL)
+		fmt.Printf("https://delaunay.org/henri%s\n", v.URL)
 	}
 
 }
