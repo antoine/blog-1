@@ -7,17 +7,17 @@ import (
 	"time"
 
 	"github.com/gorilla/feeds"
-	"github.com/kaihendry/blog"
+	"github.com/antoine/blog-1"
 )
 
 func main() {
 
-	author := feeds.Author{"Kai Hendry", "hendry+natalian@iki.fi"}
+	author := feeds.Author{"Motscousus", "example@example.com"}
 	now := time.Now()
 	feed := &feeds.Feed{
-		Title:       "Kai Hendry's blog",
-		Link:        &feeds.Link{Href: "https://natalian.org/"},
-		Description: "Anglo African linux geek living in Singapore",
+		Title:       "Motscousus's travel blog",
+		Link:        &feeds.Link{Href: "https://www.polarsteps.com/mots/6037528?s=62273598-6d19-4007-91e2-a982caecb6c6"},
+		Description: "travel blog",
 		Author:      &author,
 		Created:     now,
 	}
@@ -36,7 +36,7 @@ func main() {
 		}
 		i := feeds.Item{
 			Title:       v.Title,
-			Link:        &feeds.Link{Href: "https://natalian.org" + v.URL},
+			Link:        &feeds.Link{Href: "https://delaunay.org/henri" + v.URL},
 			Description: v.Description,
 			Created:     v.PostDate,
 		}

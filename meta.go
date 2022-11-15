@@ -17,13 +17,10 @@ var Metacrap = `<!DOCTYPE html>
 table { word-break: initial }
 </style>
 <meta name=viewport content="width=device-width, initial-scale=1">
-<meta name="twitter:creator" content="@kaihendry">
 <meta name='mobile-web-app-capable' content='yes'>
 <meta name='apple-mobile-web-app-capable' content='yes'>
-<meta name='application-name' content='natalian'>
+<meta name='application-name' content='motscousus'>
 <meta name='apple-mobile-web-app-status-bar-style' content='gold'>
-<link rel="icon" type="image/png" href="https://res.cloudinary.com/hendry/image/upload/w_200,h_200/v1492234682/kaihendry_dm2uad.png" sizes="200x200" />
-<link rel="icon" type="image/svg+xml" href="https://hendry.iki.fi/kaihendry.svg">
 `
 
 func parseMetaLine(line string) (string, string, error) {

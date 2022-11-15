@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/kaihendry/blog"
+	"github.com/antoine/blog-1"
 )
 
 type Post struct {
@@ -41,12 +41,12 @@ func main() {
 
 	t, err := template.New("metacrap").Parse(blog.Metacrap)
 	t, err = t.New("foo").Parse(`{{ template "metacrap" }}
-<link href="https://natalian.org/{{ .URL }}/" rel=canonical>
+<link href="https://delaunay.org/henri/{{ .URL }}/" rel=canonical>
 {{if .Description}}<meta name="description" content="{{ .Description }}">{{end}}
 <title>{{ .Title }}</title>
 </head>
 <body>
-<nav><a href=/>natalian.org/</a></nav>
+<nav><a href=/>delaunay.org/henri</a></nav>
 <article>
 <h1 class="headline"><a href="/{{ .URL }}/">{{ .Title }}</a></h1>
 `)
