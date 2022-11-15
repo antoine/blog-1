@@ -14,6 +14,7 @@ type Post struct {
 	URL         string
 	Title       string
 	Description string
+	Content     string
 }
 
 type Posts []Post
@@ -46,6 +47,7 @@ func visit(mdwn string, f os.FileInfo, err error) error {
 
 			desc := GetKey(mdwn, "description")["description"]
 			m := GetKey(mdwn, "title")
+			content := GetKey(mdwn, "content")["content"]
 
 			title := m["title"]
 			if title == "" {
@@ -63,7 +65,7 @@ func visit(mdwn string, f os.FileInfo, err error) error {
 				//fmt.Println("Title:", title)
 				//fmt.Println("URL:", url)
 
-				p = append(p, Post{PostDate: t, URL: url, Title: title, Description: desc})
+				p = append(p, Post{PostDate: t, URL: url, Title: title, Description: desc, Content: content})
 			}
 		}
 	}

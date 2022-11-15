@@ -29,7 +29,7 @@ func main() {
         if (maximum > len(posts)) {
                 maximum = len(posts)
         }
-		
+
 	for _, v := range posts[:maximum] {
 		if v.Description == "" {
 			log.Println("Warning:", v.URL, "has no tl;dr")
@@ -39,6 +39,7 @@ func main() {
 			Link:        &feeds.Link{Href: "https://delaunay.org/henri" + v.URL},
 			Description: v.Description,
 			Created:     v.PostDate,
+			Content:     v.Content,
 		}
 		feed.Add(&i)
 	}
