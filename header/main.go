@@ -46,9 +46,10 @@ func main() {
 <title>{{ .Title }}</title>
 </head>
 <body>
-<nav><a href=/>delaunay.org/henri</a></nav>
+<nav><a href="/henri/">delaunay.org/henri</a></nav>
 <article>
-<h1 class="headline"><a href="/{{ .URL }}/">{{ .Title }}</a></h1>
+<h1 class="headline"><a href="/henri/{{ .URL }}/">{{ .Title }}</a></h1>
+<p>scraped with love from <a href="https://www.polarsteps.com/mots/6037528?s=62273598-6d19-4007-91e2-a982caecb6c6">polarstep</a></p>
 `)
 	if err != nil {
 		panic(err)
